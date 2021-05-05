@@ -15,9 +15,13 @@
     <%= form.text_area :content %>
   </div> <br>
 
-  <%= form.label :image %>
-  <%= image_tag(@post.avatar.url) if @post.avatar && @post.avatar.url %> 
-  <%= form.file_field :avatar %> <%= form.hidden_field :avatar_cache %>
+
+  <div class="field">
+<%= form.label :image %>
+<%= image_tag(@post.avatar.url) if @post.avatar && @post.avatar.url %>
+<%= form.file_field :avatar %>
+<%= form.hidden_field :avatar_cache %>
+</div>
 
   <%= form.submit %>
 <% end %> <br>
