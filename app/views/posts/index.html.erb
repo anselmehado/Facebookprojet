@@ -29,6 +29,7 @@
   <%= post.content %>
 
 </textarea> <br>
+<%= image_tag(post.avatar_url,style:'width:300px;height:200px') if post.avatar_url %><br>
 <p><b>Posted by:</b> <%= post.user.name %></p>
 <%= link_to 'Show', post %>
 <a href="<%= edit_post_path(post.id) %> " class="bt-btn-primary">Edit</a>
