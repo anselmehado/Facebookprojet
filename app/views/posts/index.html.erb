@@ -21,14 +21,13 @@
 
   <% @posts.each do |post| %>
 
-
     <label for="">Date de creation du blog:</label> <%= post.created_at %> <br>
 
 <textarea id="w3review" name="w3review" rows="4" cols="25" maxlength="140">
 
   <%= post.content %>
 
-</textarea> <br>
+</textarea>   <br>
 <%= image_tag(post.avatar_url,style:'width:300px;height:200px') if post.avatar_url %><br>
 <p><b>Posted by:</b> <%= post.user.name %></p>
 <%= link_to 'Show', post %>

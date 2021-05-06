@@ -15,14 +15,11 @@
     <%= form.text_area :content %>
   </div> <br>
 
-
   <div class="field">
-<%= form.label :image %>
-<%= image_tag(@post.avatar.url) if @post.avatar && @post.avatar.url %>
-<%= form.file_field :avatar %>
-<%= form.hidden_field :avatar_cache %>
-</div>
-
+    <%= form.label :image %>
+    <%= image_tag(@post.avatar.url) if @post.avatar && @post.avatar.url %>
+    <%= form.file_field :avatar %>
+    <%= form.hidden_field :avatar_cache %>
   <%= form.submit %>
 <% end %> <br>
 <%= link_to " Retour à la liste des blogs", posts_path %>
