@@ -6,7 +6,7 @@
 
 <div>
   <strong>Image:</strong>
-  <%= image_tag @post.avatar.url, style:'width:400px;height:300px' %>
+ <%= image_tag(@post.avatar_url,style:'width:100px;height:1000px') if @post.avatar_url %>
 </div>
 
 <% unless @post.user_id == current_user.id %>
@@ -17,4 +17,4 @@
 <% end %>
 <% end %>
 
-<%= button_to 'Back to posts', posts_path %>
+<%= link_to 'Back to posts', posts_path %>
