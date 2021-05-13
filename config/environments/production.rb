@@ -28,6 +28,8 @@ Rails.application.configure do
 
 
   config.action_mailer.perform_caching = false
+  #config.require_master_key = true
+
 
 
   config.i18n.fallbacks = true
